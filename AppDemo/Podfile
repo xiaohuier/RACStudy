@@ -3,6 +3,5 @@ target 'AppDemo' do
 pod 'Masonry'
 pod 'AFNetworking'
 pod 'ReactiveObjC'
-pod 'libextobjc'
 pod 'SVProgressHUD'
 end

@@ -7,6 +7,9 @@
 //
 
 #import "FRPGalleryViewController.h"
+#import "FRPCell.h"
+#import "FRPPhotoImporter.h"
+
 @interface FRPGalleryFlowLayout : UICollectionViewFlowLayout
 @end
 @implementation FRPGalleryFlowLayout
@@ -22,17 +25,18 @@
 @end
 
 @interface FRPGalleryViewController ()
-
+@property (nonatomic , strong) NSArray *photoArray;
 @end
 
 @implementation FRPGalleryViewController
 
 static NSString * const reuseIdentifier = @"Cell";
 
+
 - (instancetype)init
 {
     FRPGalleryFlowLayout *flowLayout = [[FRPGalleryFlowLayout alloc] init];
-    self = [self initWithCollectionViewLayout:flowLayout];
+    self = [super initWithCollectionViewLayout:flowLayout];
     if(!self) return nil;
     return self;
 }
@@ -40,13 +44,31 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.title = @"Popular on 500px";
     
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    //Configure View
+    [self.collectionView registerClass:[FRPCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    //Reactive Stuff
+    @weakify(self);
+    [[[RACObserve(self, photoArray) deliverOnMainThread] filter:^BOOL(id  _Nullable value) {
+        return value != nil;
+    }] subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        [self.collectionView reloadData];
+    }];
     
-    // Do any additional setup after loading the view.
+    [self loadPopularPhotos];
+}
+
+- (void)loadPopularPhotos
+{
+    [[FRPPhotoImporter importPhotos] subscribeNext:^(id x){
+        self.photoArray = [NSArray safeCase:x];
+    } error:^(NSError * error){
+        NSLog(@"Couldn't fetch photofrom 500px: %@",error);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,21 +78,14 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark <UICollectionViewDataSource>
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.photoArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
+    FRPCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    [cell setPhotoModel:self.photoArray[indexPath.row]];
     
     return cell;
 }

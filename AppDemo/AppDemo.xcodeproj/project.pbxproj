@@ -19,10 +19,11 @@
 		36BF13CA215A93EF0012C06E /* FRPPhotoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BF13C9215A93EF0012C06E /* FRPPhotoImporter.m */; };
 		36E766E91FF1122D0028B301 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E766E81FF1122D0028B301 /* AppDelegate.m */; };
 		36E766EC1FF1122D0028B301 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E766EB1FF1122D0028B301 /* ViewController.m */; };
-		36E766EF1FF1122D0028B301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E766ED1FF1122D0028B301 /* Main.storyboard */; };
 		36E766F11FF1122D0028B301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36E766F01FF1122D0028B301 /* Assets.xcassets */; };
 		36E766F41FF1122D0028B301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E766F21FF1122D0028B301 /* LaunchScreen.storyboard */; };
 		36E766F71FF1122D0028B301 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E766F61FF1122D0028B301 /* main.m */; };
+		79F979B0216B8A1800AA2AD3 /* NSObject+SafeCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F979AF216B8A1800AA2AD3 /* NSObject+SafeCast.m */; };
+		79F979B3216B8FBA00AA2AD3 /* FRPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F979B2216B8FBA00AA2AD3 /* FRPCell.m */; };
 		A7C96012970458CB83B3408B /* libPods-AppDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B53ED6312BF1833EB6296C3 /* libPods-AppDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -55,13 +56,16 @@
 		36E766E81FF1122D0028B301 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		36E766EA1FF1122D0028B301 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		36E766EB1FF1122D0028B301 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		36E766EE1FF1122D0028B301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36E766F01FF1122D0028B301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36E766F31FF1122D0028B301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36E766F51FF1122D0028B301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36E766F61FF1122D0028B301 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B53ED6312BF1833EB6296C3 /* libPods-AppDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761B91CE7ECBBBDBDB1F5846 /* Pods-AppDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppDemo/Pods-AppDemo.release.xcconfig"; sourceTree = "<group>"; };
+		79F979AE216B8A1800AA2AD3 /* NSObject+SafeCast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeCast.h"; sourceTree = "<group>"; };
+		79F979AF216B8A1800AA2AD3 /* NSObject+SafeCast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SafeCast.m"; sourceTree = "<group>"; };
+		79F979B1216B8FBA00AA2AD3 /* FRPCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRPCell.h; sourceTree = "<group>"; };
+		79F979B2216B8FBA00AA2AD3 /* FRPCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRPCell.m; sourceTree = "<group>"; };
 		E1B81BA4D944BBCCB3C946D0 /* Pods-AppDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppDemo/Pods-AppDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,11 +149,14 @@
 				36E766EB1FF1122D0028B301 /* ViewController.m */,
 				36BF13A6215A88CD0012C06E /* FRPGalleryViewController.h */,
 				36BF13A7215A88CD0012C06E /* FRPGalleryViewController.m */,
+				79F979B1216B8FBA00AA2AD3 /* FRPCell.h */,
+				79F979B2216B8FBA00AA2AD3 /* FRPCell.m */,
 				36BF13C5215A93CA0012C06E /* FRPPhotoModel.h */,
 				36BF13C6215A93CA0012C06E /* FRPPhotoModel.m */,
 				36BF13C8215A93EF0012C06E /* FRPPhotoImporter.h */,
 				36BF13C9215A93EF0012C06E /* FRPPhotoImporter.m */,
-				36E766ED1FF1122D0028B301 /* Main.storyboard */,
+				79F979AE216B8A1800AA2AD3 /* NSObject+SafeCast.h */,
+				79F979AF216B8A1800AA2AD3 /* NSObject+SafeCast.m */,
 				36E766F01FF1122D0028B301 /* Assets.xcassets */,
 				36E766F21FF1122D0028B301 /* LaunchScreen.storyboard */,
 				36E766F51FF1122D0028B301 /* Info.plist */,
@@ -178,7 +185,6 @@
 				36E766E01FF1122D0028B301 /* Sources */,
 				36E766E11FF1122D0028B301 /* Frameworks */,
 				36E766E21FF1122D0028B301 /* Resources */,
-				15355058A07D1031CA449212 /* [CP] Embed Pods Frameworks */,
 				B82708384CF1A893AE626CA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -230,28 +236,12 @@
 			files = (
 				36E766F41FF1122D0028B301 /* LaunchScreen.storyboard in Resources */,
 				36E766F11FF1122D0028B301 /* Assets.xcassets in Resources */,
-				36E766EF1FF1122D0028B301 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15355058A07D1031CA449212 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppDemo/Pods-AppDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B82708384CF1A893AE626CA5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,7 +253,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -306,22 +296,16 @@
 				36BF13BD215A919A0012C06E /* PXAPIHelper+Auth.m in Sources */,
 				36BF13CA215A93EF0012C06E /* FRPPhotoImporter.m in Sources */,
 				36BF13C0215A919A0012C06E /* OAuthCore.m in Sources */,
+				79F979B3216B8FBA00AA2AD3 /* FRPCell.m in Sources */,
 				36BF13BE215A919A0012C06E /* PXRequest.m in Sources */,
 				36BF13BC215A919A0012C06E /* PXAPIHelper.m in Sources */,
+				79F979B0216B8A1800AA2AD3 /* NSObject+SafeCast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		36E766ED1FF1122D0028B301 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				36E766EE1FF1122D0028B301 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		36E766F21FF1122D0028B301 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -452,6 +436,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AppDemo",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AppDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = AppDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = w321312.AppDemo;
@@ -471,6 +456,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AppDemo",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AppDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = AppDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = w321312.AppDemo;

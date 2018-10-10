@@ -9,5 +9,11 @@
 #import "FRPPhotoModel.h"
 
 @implementation FRPPhotoModel
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+    }
+    return self;
+}
 @end
