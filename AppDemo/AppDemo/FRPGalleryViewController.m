@@ -9,6 +9,7 @@
 #import "FRPGalleryViewController.h"
 #import "FRPCell.h"
 #import "FRPPhotoImporter.h"
+#import "FRPFullSizePhotoViewController.h"
 
 @interface FRPGalleryFlowLayout : UICollectionViewFlowLayout
 @end
@@ -25,7 +26,7 @@
 @end
 
 @interface FRPGalleryViewController ()
-@property (nonatomic , strong) NSArray *photoArray;
+@property (nonatomic , strong) NSArray *photosArray;
 @end
 
 @implementation FRPGalleryViewController
@@ -52,7 +53,7 @@ static NSString * const reuseIdentifier = @"Cell";
     self.collectionView.backgroundColor = [UIColor whiteColor];
     //Reactive Stuff
     @weakify(self);
-    [[[RACObserve(self, photoArray) deliverOnMainThread] filter:^BOOL(id  _Nullable value) {
+    [[[RACObserve(self, photosArray) deliverOnMainThread] filter:^BOOL(id  _Nullable value) {
         return value != nil;
     }] subscribeNext:^(id  _Nullable x) {
         @strongify(self);
@@ -65,7 +66,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)loadPopularPhotos
 {
     [[FRPPhotoImporter importPhotos] subscribeNext:^(id x){
-        self.photoArray = [NSArray safeCase:x];
+        self.photosArray = [NSArray safeCase:x];
     } error:^(NSError * error){
         NSLog(@"Couldn't fetch photofrom 500px: %@",error);
     }];
@@ -80,14 +81,28 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.photoArray.count;
+    return self.photosArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     FRPCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    [cell setPhotoModel:self.photoArray[indexPath.row]];
+    [cell setPhotoModel:self.photosArray[indexPath.row]];
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    FRPFullSizePhotoViewController * viewController = [[FRPFullSizePhotoViewController alloc] initWithPhotoModels:self.photosArray currentPhotoIndex:indexPath.item];
+    
+    viewController.delegate = self;
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+- (void)userDidScroll:(FRPFullSizePhotoViewController *)viewController toPhotoAtIndex:(NSInteger)index{
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]
+                                atScrollPosition:UICollectionViewScrollPositionCenteredVertically
+                                        animated:NO];
 }
 
 #pragma mark <UICollectionViewDelegate>

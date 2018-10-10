@@ -15,13 +15,15 @@
 		36BF13C0215A919A0012C06E /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BF13B9215A919A0012C06E /* OAuthCore.m */; };
 		36BF13C1215A919A0012C06E /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BF13BA215A919A0012C06E /* OAuth+Additions.m */; };
 		36BF13C2215A919A0012C06E /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BF13BB215A919A0012C06E /* NSData+Base64.m */; };
-		36BF13C7215A93CA0012C06E /* FRPPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BF13C6215A93CA0012C06E /* FRPPhotoModel.m */; };
 		36BF13CA215A93EF0012C06E /* FRPPhotoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BF13C9215A93EF0012C06E /* FRPPhotoImporter.m */; };
 		36E766E91FF1122D0028B301 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E766E81FF1122D0028B301 /* AppDelegate.m */; };
 		36E766EC1FF1122D0028B301 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E766EB1FF1122D0028B301 /* ViewController.m */; };
 		36E766F11FF1122D0028B301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36E766F01FF1122D0028B301 /* Assets.xcassets */; };
 		36E766F41FF1122D0028B301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E766F21FF1122D0028B301 /* LaunchScreen.storyboard */; };
 		36E766F71FF1122D0028B301 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E766F61FF1122D0028B301 /* main.m */; };
+		79B3309D216E30BF00A6F81A /* FRPFullSizePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3309C216E30BF00A6F81A /* FRPFullSizePhotoViewController.m */; };
+		79B330A0216E319D00A6F81A /* FRPPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B3309F216E319D00A6F81A /* FRPPhotoViewController.m */; };
+		79B330A3216E37B500A6F81A /* FRPPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B330A2216E37B500A6F81A /* FRPPhotoModel.m */; };
 		79F979B0216B8A1800AA2AD3 /* NSObject+SafeCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F979AF216B8A1800AA2AD3 /* NSObject+SafeCast.m */; };
 		79F979B3216B8FBA00AA2AD3 /* FRPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F979B2216B8FBA00AA2AD3 /* FRPCell.m */; };
 		A7C96012970458CB83B3408B /* libPods-AppDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B53ED6312BF1833EB6296C3 /* libPods-AppDemo.a */; };
@@ -47,8 +49,6 @@
 		36BF13BA215A919A0012C06E /* OAuth+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAuth+Additions.m"; sourceTree = "<group>"; };
 		36BF13BB215A919A0012C06E /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		36BF13C4215A920A0012C06E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		36BF13C5215A93CA0012C06E /* FRPPhotoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRPPhotoModel.h; sourceTree = "<group>"; };
-		36BF13C6215A93CA0012C06E /* FRPPhotoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoModel.m; sourceTree = "<group>"; };
 		36BF13C8215A93EF0012C06E /* FRPPhotoImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRPPhotoImporter.h; sourceTree = "<group>"; };
 		36BF13C9215A93EF0012C06E /* FRPPhotoImporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoImporter.m; sourceTree = "<group>"; };
 		36E766E41FF1122D0028B301 /* AppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +62,12 @@
 		36E766F61FF1122D0028B301 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B53ED6312BF1833EB6296C3 /* libPods-AppDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761B91CE7ECBBBDBDB1F5846 /* Pods-AppDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppDemo/Pods-AppDemo.release.xcconfig"; sourceTree = "<group>"; };
+		79B3309B216E30BF00A6F81A /* FRPFullSizePhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRPFullSizePhotoViewController.h; sourceTree = "<group>"; };
+		79B3309C216E30BF00A6F81A /* FRPFullSizePhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRPFullSizePhotoViewController.m; sourceTree = "<group>"; };
+		79B3309E216E319D00A6F81A /* FRPPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRPPhotoViewController.h; sourceTree = "<group>"; };
+		79B3309F216E319D00A6F81A /* FRPPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoViewController.m; sourceTree = "<group>"; };
+		79B330A1216E37B500A6F81A /* FRPPhotoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRPPhotoModel.h; sourceTree = "<group>"; };
+		79B330A2216E37B500A6F81A /* FRPPhotoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoModel.m; sourceTree = "<group>"; };
 		79F979AE216B8A1800AA2AD3 /* NSObject+SafeCast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeCast.h"; sourceTree = "<group>"; };
 		79F979AF216B8A1800AA2AD3 /* NSObject+SafeCast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SafeCast.m"; sourceTree = "<group>"; };
 		79F979B1216B8FBA00AA2AD3 /* FRPCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRPCell.h; sourceTree = "<group>"; };
@@ -149,10 +155,14 @@
 				36E766EB1FF1122D0028B301 /* ViewController.m */,
 				36BF13A6215A88CD0012C06E /* FRPGalleryViewController.h */,
 				36BF13A7215A88CD0012C06E /* FRPGalleryViewController.m */,
+				79B3309B216E30BF00A6F81A /* FRPFullSizePhotoViewController.h */,
+				79B3309C216E30BF00A6F81A /* FRPFullSizePhotoViewController.m */,
+				79B3309E216E319D00A6F81A /* FRPPhotoViewController.h */,
+				79B3309F216E319D00A6F81A /* FRPPhotoViewController.m */,
+				79B330A1216E37B500A6F81A /* FRPPhotoModel.h */,
+				79B330A2216E37B500A6F81A /* FRPPhotoModel.m */,
 				79F979B1216B8FBA00AA2AD3 /* FRPCell.h */,
 				79F979B2216B8FBA00AA2AD3 /* FRPCell.m */,
-				36BF13C5215A93CA0012C06E /* FRPPhotoModel.h */,
-				36BF13C6215A93CA0012C06E /* FRPPhotoModel.m */,
 				36BF13C8215A93EF0012C06E /* FRPPhotoImporter.h */,
 				36BF13C9215A93EF0012C06E /* FRPPhotoImporter.m */,
 				79F979AE216B8A1800AA2AD3 /* NSObject+SafeCast.h */,
@@ -286,9 +296,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				36BF13BF215A919A0012C06E /* PXRequest+Creation.m in Sources */,
-				36BF13C7215A93CA0012C06E /* FRPPhotoModel.m in Sources */,
 				36BF13A8215A88CD0012C06E /* FRPGalleryViewController.m in Sources */,
 				36E766EC1FF1122D0028B301 /* ViewController.m in Sources */,
+				79B3309D216E30BF00A6F81A /* FRPFullSizePhotoViewController.m in Sources */,
+				79B330A0216E319D00A6F81A /* FRPPhotoViewController.m in Sources */,
 				36BF13C2215A919A0012C06E /* NSData+Base64.m in Sources */,
 				36BF13C1215A919A0012C06E /* OAuth+Additions.m in Sources */,
 				36E766F71FF1122D0028B301 /* main.m in Sources */,
@@ -297,6 +308,7 @@
 				36BF13CA215A93EF0012C06E /* FRPPhotoImporter.m in Sources */,
 				36BF13C0215A919A0012C06E /* OAuthCore.m in Sources */,
 				79F979B3216B8FBA00AA2AD3 /* FRPCell.m in Sources */,
+				79B330A3216E37B500A6F81A /* FRPPhotoModel.m in Sources */,
 				36BF13BE215A919A0012C06E /* PXRequest.m in Sources */,
 				36BF13BC215A919A0012C06E /* PXAPIHelper.m in Sources */,
 				79F979B0216B8A1800AA2AD3 /* NSObject+SafeCast.m in Sources */,

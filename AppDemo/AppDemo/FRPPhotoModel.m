@@ -2,18 +2,13 @@
 //  FRPPhotoModel.m
 //  AppDemo
 //
-//  Created by 周正东 on 2018/9/26.
-//  Copyright © 2018年 周正东. All rights reserved.
+//  Created by eastzhou on 2018/10/10.
+//  Copyright © 2018 周正东. All rights reserved.
 //
 
 #import "FRPPhotoModel.h"
 
 @implementation FRPPhotoModel
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-    }
-    return self;
-}
+
+
 @end
