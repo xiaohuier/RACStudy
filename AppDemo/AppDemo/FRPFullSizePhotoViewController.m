@@ -9,6 +9,7 @@
 #import "FRPFullSizePhotoViewController.h"
 #import "FRPPhotoViewController.h"
 #import "FRPPhotoModel.h"
+#import "FRPFullSizedPhotoViewModel.h"
 
 @interface FRPFullSizePhotoViewController ()<UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 @property (nonatomic, strong) NSArray<FRPPhotoModel *> *photoModelArray;
@@ -17,15 +18,10 @@
 
 @implementation FRPFullSizePhotoViewController
 
-- (instancetype)initWithPhotoModels:(NSArray *)photoModelArray currentPhotoIndex:(NSInteger)photoIndex{
+- (instancetype)init
+{
     self = [self init];
     if (!self) return nil;
-    
-    //Initialized, read-only properties
-    self.photoModelArray = photoModelArray;
-    
-    //Configure self
-    self.title = [self.photoModelArray[photoIndex] photoName];
 
     //ViewControllers
     self.pageViewController = [[UIPageViewController alloc]
@@ -36,7 +32,7 @@
     self.pageViewController.delegate = self;
     [self addChildViewController:self.pageViewController];
     
-    [self.pageViewController setViewControllers:@[[self photoViewControllerForIndex:photoIndex]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    
     return self;
 }
 

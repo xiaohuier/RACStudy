@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@class FRPFullSizePhotoViewController, FRPPhotoModel;
+@class FRPFullSizePhotoViewController, FRPPhotoModel, FRPFullSizePhotoViewModel;
 
 @protocol FRPFullSizePhotoViewControllerDelegate <NSObject>
 - (void)userDidScroll:(FRPFullSizePhotoViewController *)viewController toPhotoAtIndex:(NSInteger)index;
@@ -18,8 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FRPFullSizePhotoViewController : UIViewController
 - (instancetype)initWithPhotoModels:(NSArray *)photoModelArray currentPhotoIndex:(NSInteger)photoIndex;
 
-@property (nonatomic , readonly) NSArray<FRPPhotoModel *> *photoModelArray;
 @property (nonatomic, weak) id<FRPFullSizePhotoViewControllerDelegate> delegate;
+@property (nonatomic ,strong ) FRPFullSizePhotoViewModel *viewModel;
 @end
 
 NS_ASSUME_NONNULL_END

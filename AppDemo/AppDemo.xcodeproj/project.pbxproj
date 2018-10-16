@@ -16,6 +16,7 @@
 		36BF13C1215A919A0012C06E /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BF13BA215A919A0012C06E /* OAuth+Additions.m */; };
 		36BF13C2215A919A0012C06E /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BF13BB215A919A0012C06E /* NSData+Base64.m */; };
 		36BF13CA215A93EF0012C06E /* FRPPhotoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BF13C9215A93EF0012C06E /* FRPPhotoImporter.m */; };
+		36CEE92021762C2700307526 /* FRPFullSizedPhotoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CEE91F21762C2700307526 /* FRPFullSizedPhotoViewModel.m */; };
 		36E766E91FF1122D0028B301 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E766E81FF1122D0028B301 /* AppDelegate.m */; };
 		36E766EC1FF1122D0028B301 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E766EB1FF1122D0028B301 /* ViewController.m */; };
 		36E766F11FF1122D0028B301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36E766F01FF1122D0028B301 /* Assets.xcassets */; };
@@ -51,6 +52,8 @@
 		36BF13C4215A920A0012C06E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		36BF13C8215A93EF0012C06E /* FRPPhotoImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRPPhotoImporter.h; sourceTree = "<group>"; };
 		36BF13C9215A93EF0012C06E /* FRPPhotoImporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoImporter.m; sourceTree = "<group>"; };
+		36CEE91E21762C2700307526 /* FRPFullSizedPhotoViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRPFullSizedPhotoViewModel.h; sourceTree = "<group>"; };
+		36CEE91F21762C2700307526 /* FRPFullSizedPhotoViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRPFullSizedPhotoViewModel.m; sourceTree = "<group>"; };
 		36E766E41FF1122D0028B301 /* AppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36E766E71FF1122D0028B301 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36E766E81FF1122D0028B301 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				36BF13A7215A88CD0012C06E /* FRPGalleryViewController.m */,
 				79B3309B216E30BF00A6F81A /* FRPFullSizePhotoViewController.h */,
 				79B3309C216E30BF00A6F81A /* FRPFullSizePhotoViewController.m */,
+				36CEE91E21762C2700307526 /* FRPFullSizedPhotoViewModel.h */,
+				36CEE91F21762C2700307526 /* FRPFullSizedPhotoViewModel.m */,
 				79B3309E216E319D00A6F81A /* FRPPhotoViewController.h */,
 				79B3309F216E319D00A6F81A /* FRPPhotoViewController.m */,
 				79B330A1216E37B500A6F81A /* FRPPhotoModel.h */,
@@ -196,6 +201,7 @@
 				36E766E11FF1122D0028B301 /* Frameworks */,
 				36E766E21FF1122D0028B301 /* Resources */,
 				B82708384CF1A893AE626CA5 /* [CP] Copy Pods Resources */,
+				CE7B6D4FBE731FAE1A8C30E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,11 +269,26 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppDemo/Pods-AppDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE7B6D4FBE731FAE1A8C30E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppDemo/Pods-AppDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F2A866829936415389A287D3 /* [CP] Check Pods Manifest.lock */ = {
@@ -296,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36BF13BF215A919A0012C06E /* PXRequest+Creation.m in Sources */,
+				36CEE92021762C2700307526 /* FRPFullSizedPhotoViewModel.m in Sources */,
 				36BF13A8215A88CD0012C06E /* FRPGalleryViewController.m in Sources */,
 				36E766EC1FF1122D0028B301 /* ViewController.m in Sources */,
 				79B3309D216E30BF00A6F81A /* FRPFullSizePhotoViewController.m in Sources */,
@@ -451,6 +473,27 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AppDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = AppDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"AFNetworking\"",
+					"-l\"Masonry\"",
+					"-l\"ReactiveObjC\"",
+					"-l\"SVProgressHUD\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = w321312.AppDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -471,6 +514,27 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AppDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = AppDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"AFNetworking\"",
+					"-l\"Masonry\"",
+					"-l\"ReactiveObjC\"",
+					"-l\"SVProgressHUD\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = w321312.AppDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
